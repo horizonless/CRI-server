@@ -2,6 +2,23 @@
 Chatting Remotely over the Internet
 This protocal is similar to IRC [RFC1459](http://www.networksorcery.com/enp/rfc/rfc1459.txt).
 
+The server file needs to be complied first.
+For local server test
+First open three terminals. One for servers,the other two are for clients.
+type "make" on server terminal.
+```
+gcc -o CRI.out CRI.c
+```
+By
+```
+./CRI.out --opt-pass=password
+```
+you can run the server and get the port number. 
+On the "client" terminal,use the command "nc local host portnumber" to get the server.
+You can have multi client chat with each other all funcionality is working fine on my computer.
+
+The server also support IPV6 correctly with AF_INET6 and all the IPV6 things implemented.
+
 The following command can be used to interact with the server:
 - USER
 - LIST
